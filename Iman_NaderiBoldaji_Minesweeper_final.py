@@ -62,7 +62,10 @@ def show_matrix(name_of_matrix ):
     for i in range(board_size):
         print(clr.Fore.BLUE,f'{list_ch[i]}' , clr.Fore.WHITE,end = '')  
         for j in range(board_size):
-            print(f' {name_of_matrix[i][j]} ' ,end = '')
+            if name_of_matrix[i][j] == 9 :
+                print(f'{clr.Fore.RED} {name_of_matrix[i][j]} {clr.Fore.WHITE}' ,end = '')
+            else :
+                print(f' {name_of_matrix[i][j]} ' ,end = '')
         print()
 
 #input from user to show places of playground and check everything . User must be input correct format like (a1 ,A1) that it is ok 
