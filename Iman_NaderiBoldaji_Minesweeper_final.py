@@ -53,9 +53,13 @@ def new_matrix(mdim_number , chr_for_show):
 #This fuction use to show playground
 def show_matrix(name_of_matrix ):
     #Show the numbers above the playing field. so User can choose easily
+   
     print('   ' ,end='')
     for i in range(1 ,board_size + 1):
-        print(clr.Fore.RED,f'{i} ' ,end='')
+        if i < 10:
+            print(clr.Fore.RED,f'{i} ' ,end='')
+        else :
+            print(clr.Fore.RED,f'{i}' ,end='')
     print()
     #create a list from uppercase charater for showing in the playing feild
     list_ch = list(st.ascii_uppercase)
@@ -73,46 +77,52 @@ def show_matrix(name_of_matrix ):
 #   ****************   used list coperhension ********** Tuple ********
 def choose_user(choose_user ,board_matrix ,user_matrix):
     try :
+        number_tuple = tuple(range(10))
         chr_tuple = tuple(st.ascii_uppercase)
         #************ list comperhension ***********
-        chr_list = [chr_tuple[x] for x in range (0 ,len(board_matrix))]
         # chr_list =[]
         # for x in range(0 , len(board_matrix)):
         #     chr_list.append(chr_tuple[x])
         #print(chr_list)
-        if (1 < len(choose_user) < 3)  and (choose_user[0].upper() in chr_list) and (  0 < int(choose_user[1]) <= len(board_matrix)) :
-            row = 0
-            col = int(choose_user[1])  - 1
-            #List comperhension ***** I want use but row must be interger not list ,however can index to access value but
-            # I think it is not good idea
-            #row = [i for i in range(len(chr_list))  if chr_list[i] == choose_user[0].upper()]
-            for i in range(len(chr_list)):
+        chr_list = [chr_tuple[x] for x in range (0 ,len(board_matrix))]
+        for i in range(len(chr_list)):
                 if chr_list[i] == choose_user[0].upper() :
                     row = i
-            if board_matrix[row][col] == 9:#Suppose that ,this number is mine
-                print(f'{clr.Fore.RED}   ( Escape!  bomb  ) ') # change color promt
-                user_matrix[row][col] ='*'
-                time.sleep(1.2)
-                print()
-                show_matrix(user_matrix)
-                print()
-                print(f'{clr.Fore.LIGHTRED_EX}  GAME OVER ):  BY BY  (Try more)   ')
-                time.sleep(2)
-                print()
-                print(f'{clr.Fore.CYAN} Minesweeper game answer was (Bomb = 9): ')
-                show_matrix(board_matrix)
-                print(clr.Fore.WHITE)
-                return False
-            #show the place that it has number and it will be show for user
-            elif 0 < board_matrix[row][col] < 9:
-                user_matrix[row][col] = board_matrix[row][col]
-            #show the plase that it has nothing and it will be show all placese arounde the this selected plase for user
-            elif board_matrix[row][col] == 0 :
-                neighbors_find(user_matrix , board_matrix ,row ,col)
+        
+        if (1 < len(choose_user) < 3) and (choose_user[0].upper() in chr_list) and ( 0 < int(choose_user[1]) <= len(board_matrix)) :
+                col = int(choose_user[1])  - 1
+                return result_choose_user(board_matrix ,user_board ,row , col)
+        if (2 < len(choose_user) < 4) and (choose_user[0].upper() in chr_list) and (int(choose_user[1]) in number_tuple) and (int(choose_user[2]) in number_tuple) and ( 0 < int(choose_user[1]+choose_user[2]) <= len(board_matrix)) :
+            col = int(choose_user[1]+choose_user[2]) - 1
+            return result_choose_user(board_matrix ,user_board ,row , col)
         else:
-            print(clr.Fore.GREEN ,'Dear user you must input correct format. for exapmle (A1,B2). \n (the uper or lower character is not important ) \n' )
+             print(clr.Fore.GREEN ,'Dear user you must input correct format. for exapmle (A1,B2). \n (the uper or lower character is not important ) \n' )    
     except ValueError as val:
-        print(f'{clr.Fore.YELLOW}Dear user you must input correct format. for exapmle (A1,B2). \n (the uper or lower character is not important ) \n  {clr.Fore.WHITE} ')
+        print(f'{clr.Fore.GREEN}Dear user you must input correct format. for exapmle (A1,B2). \n (the uper or lower character is not important ) \n  {clr.Fore.WHITE} ')
+
+        
+def result_choose_user(board_matrix ,user_matrix ,row ,column):
+    number_tuple = tuple(range(9))
+    if board_matrix[row][column] == 9:#Suppose that ,this number is mine
+        print(f'{clr.Fore.RED}   ( Escape!  bomb  ) ') # change color promt
+        user_matrix[row][column] ='*'
+        time.sleep(1.2)
+        print()
+        show_matrix(user_matrix)
+        print()
+        print(f'{clr.Fore.LIGHTRED_EX}  GAME OVER ):  BY BY  (Try more)   ')
+        time.sleep(2)
+        print()
+        print(f'{clr.Fore.CYAN} Minesweeper game answer was (Bomb = 9): ')
+        show_matrix(board_matrix)
+        print(clr.Fore.WHITE)
+        return False
+    #show the place that it has number and it will be show for user
+    elif 0 < board_matrix[row][column] < 9:
+        user_matrix[row][column] = board_matrix[row][column]
+    #show the plase that it has nothing and it will be show all placese arounde the this selected plase for user
+    elif board_matrix[row][column] == 0 :
+        neighbors_find(user_matrix , board_matrix ,row ,column)
 
 #This function random put mines in the playground ** I like it **   In my program mine is '9' 
 def put_mines(mines ,matrix):
@@ -130,7 +140,6 @@ def put_mines(mines ,matrix):
      
 
 #The following three function are  important  this program that calculate all value of places in playground *** Used dectionary ***
-
 def game_calculator_position(top_row ,buttom_row ,left_row ,right_row):
     top_row ,buttom_row ,left_row , right_row = top_row ,buttom_row ,left_row ,right_row
     temp_dic ={
@@ -326,7 +335,7 @@ def game_win (get_matix ,Get_number_mines):
 
 #This part of my program to initialize all varible
 board_size = get_number_user('How big the board should be? ' ,'Be attention, Input a integer number bigger than two !!')
-mines = get_number_user('How many mines are to be placed? ' ,'Be attention, I nput  a interger number !!')
+mines = get_number_user('How many mines are to be placed? ' ,'Be attention, Input a integer number bigger than two !!')
 print()
 print(f'You must enter the correct format and find the mines.\n For example (A3 ,B2 ,...). \n no matter the uppercase or lowercase character \n \n {clr.Fore.GREEN}   {chr(10020)}  Good Luck {chr(10020) } {clr.Fore.WHITE}   ')
 game_matrix = new_matrix(board_size ,0)
