@@ -6,9 +6,9 @@ A simple " Minesweeper " game written in Python.
 Minesweeper game is one of the classic games that we encountered with the advent of computers. This game is very simple but has its own rules.
 There are three types of cells in this game:
 
-1: Bomb cells
-2: empty cells
-3: Cells that help you find bombs by revealing specific numbers.
+### 1: Bomb cells
+### 2: empty cells
+### 3: Cells that help you find bombs by revealing specific numbers.
 The aim of the game is to discover all the empty cells and locate the bomb cells without activating them. The numbers in the cells indicate how many adjacent cells contain bombs. Good luck!
 
 ## Installation and Setup
