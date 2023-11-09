@@ -40,10 +40,8 @@ And more...
 # Links and sources:
   ## 1:https://www.w3schools.com
   ## 2:https://www.geeksforgeeks.org/python-random-sample-function/
-  ## 3:
 # Additional Notes
- view image  of the "Mine Finder"
- 
+ view image  of the playing field
 ![PlayingField](https://github.com/imannaderi238/Minwsweeper/assets/148794429/66fb73e5-a855-4fd0-a6a0-1b9238a5716e)
 
 Contact Information:
