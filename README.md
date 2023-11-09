@@ -15,7 +15,7 @@ The aim of the game is to discover all the empty cells and locate the bomb cells
 
 ### 1. Install Python
 
-To run the "Mine Finder" game, you'll need to install Python (version 3.10.11 is recommended). You can download the latest version from the [Python website](https://www.python.org/downloads/).
+To run the "Minesweeper" game, you'll need to install Python (version 3.10.11 is recommended). You can download the latest version from the [Python website](https://www.python.org/downloads/).
 
 ### 2. Install libraries
 
