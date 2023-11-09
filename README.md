@@ -42,7 +42,8 @@ And more...
   ## 2:https://www.geeksforgeeks.org/python-random-sample-function/
   ## 3:
 # Additional Notes
-To view images and GIFs of the "Mine Finder" game, visit our website.
+ view image  of the "Mine Finder"
+ ![PlayingField](https://github.com/imannaderi238/Minwsweeper/assets/148794429/44edd877-4704-4b61-aa4f-3dfef6fd2ce9)
 
 Contact Information:
 Name: Iman Nadri Baladaji
