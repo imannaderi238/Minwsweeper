@@ -43,7 +43,7 @@ And more...
  view image  of the playing field
 ![PlayingField](https://github.com/imannaderi238/Minwsweeper/assets/148794429/66fb73e5-a855-4fd0-a6a0-1b9238a5716e)
 
-Contact Information:
+# Contact Information:
 Name: Iman Nadri Baladaji
 Email: iman.naderi.brn@gmail.com
 
