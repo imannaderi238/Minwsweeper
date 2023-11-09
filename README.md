@@ -1,5 +1,4 @@
 # Minesweeper
-A simple " Minesweeper " game written in Python.
 
 ## Description
 
