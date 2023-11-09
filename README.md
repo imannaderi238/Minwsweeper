@@ -7,7 +7,7 @@ Minesweeper game is one of the classic games that we encountered with the advent
 There are three types of cells in this game:
 
 ### 1: Bomb cells
-### 2: empty cells
+### 2: Empty cells
 ### 3: Cells that help you find bombs by revealing specific numbers.
 The aim of the game is to discover all the empty cells and locate the bomb cells without activating them. The numbers in the cells indicate how many adjacent cells contain bombs. Good luck!
 
@@ -32,13 +32,15 @@ Follow the instructions in the game to try to locate the mines and avoid dangero
 
 # Features
 
-### 1:Ability to play on various-sized game boards.
-### 2:Simple and user-friendly design suitable for all ages.
-### 3:Randomized mine placement.
+## 1:Ability to play on various-sized game boards.
+## 2:Simple and user-friendly design suitable for all ages.
+## 3:Randomized mine placement.
 And more...
 
-
-
+# Links and sources:
+  ## 1:https://www.w3schools.com
+  ## 2:https://www.geeksforgeeks.org/python-random-sample-function/
+  ## 3:
 # Additional Notes
 To view images and GIFs of the "Mine Finder" game, visit our website.
 
