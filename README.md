@@ -26,15 +26,15 @@ After installing Python, you need to install the required libraries for the game
 #### 1: pip install Time
 
 After installing the prerequisites, run the "Minesweeper" game by using the following command:
-python Iman_NaderiBoldaji+Minesweeper_final.py
+python Iman_NaderiBoldaji_Minesweeper_final.py
 
 Follow the instructions in the game to try to locate the mines and avoid dangerous spots.
 
 # Features
 
-## 1:Ability to play on various-sized game boards.
-## 2:Simple and user-friendly design suitable for all ages.
-## 3:Randomized mine placement.
+### 1:Ability to play on various-sized game boards.
+### 2:Simple and user-friendly design suitable for all ages.
+### 3:Randomized mine placement.
 And more...
 
 
