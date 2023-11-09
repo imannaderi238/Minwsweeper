@@ -32,9 +32,9 @@ Follow the instructions in the game to try to locate the mines and avoid dangero
 
 # Features
 
-## 1:Ability to play on various-sized game boards.
-## 2:Simple and user-friendly design suitable for all ages.
-## 3:Randomized mine placement.
+#### 1:Ability to play on various-sized game boards.
+#### 2:Simple and user-friendly design suitable for all ages.
+#### 3:Randomized mine placement.
 And more...
 
 # Links and sources:
@@ -43,7 +43,8 @@ And more...
   ## 3:
 # Additional Notes
  view image  of the "Mine Finder"
- ![PlayingField](https://github.com/imannaderi238/Minwsweeper/assets/148794429/44edd877-4704-4b61-aa4f-3dfef6fd2ce9)
+ 
+![PlayingField](https://github.com/imannaderi238/Minwsweeper/assets/148794429/66fb73e5-a855-4fd0-a6a0-1b9238a5716e)
 
 Contact Information:
 Name: Iman Nadri Baladaji
