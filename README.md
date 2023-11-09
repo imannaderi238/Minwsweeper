@@ -46,7 +46,7 @@ And more...
 
 Contact Information:
 Name: Iman Nadri Baladaji
-Email: iman.naderi.bnr@email.com
+Email: iman.naderi.brn@gmail.com
 
 
 
